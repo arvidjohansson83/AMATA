@@ -1,4 +1,4 @@
-# AMATA — Autonomous Multi‑Asset & Multi‑Strategy Trading Agent. 
+# AMATA — Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
 A fully autonomous, regime‑aware and volatility‑adaptive trading agent built for real market conditions.
 
 AMATA is the evolution of my session‑based architecture MATA.  
