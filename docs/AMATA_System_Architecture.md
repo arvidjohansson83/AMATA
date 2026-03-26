@@ -1,5 +1,5 @@
 # AMATA System Architecture  
-**Autonomous Multi‑Asset & Multi‑Strategy Trading Agent**
+## Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
 
 
 The AMATA System Architecture defines how the platform operates internally.  

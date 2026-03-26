@@ -1,5 +1,5 @@
 # AMATA Platform Overview  
-**Autonomous Multi‑Asset & Multi‑Strategy Trading Agent**
+## Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
 
 
 AMATA is a fully autonomous trading platform designed to operate across multiple symbols, multiple strategies and multiple market regimes.  
