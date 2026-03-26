@@ -1,5 +1,6 @@
 # AMATA Platform Documentation Structure  
-Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
+**Autonomous Multi‑Asset & Multi‑Strategy Trading Agent**
+
 
 This documentation is organized into modular sections that reflect the architecture of the AMATA Platform.  
 Each module can be developed, published, and expanded independently.
