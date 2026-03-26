@@ -1,12 +1,12 @@
 # AMATA — Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
-A fully autonomous, regime‑aware and volatility‑adaptive trading agent built for real market conditions.
+**A fully autonomous, regime‑aware and volatility‑adaptive trading agent built for real market conditions.**
 
 AMATA is the evolution of my session‑based architecture MATA.  
 Where MATA focused on structural patterns, volatility behaviour and deterministic execution,  
 AMATA adds the missing dimension: **context**.
 
 ## Core principles
-- 24/5 market structure analysis and context‑aware execution  
+- Continuous market structure analysis during each symbol’s active market hours
 - Regime‑based market structure analysis & volatility state modelling
 - Macro‑aware safety layer with automatic execution halts  
 - Multi‑Asset & Multi‑Strategy architecture
@@ -31,6 +31,7 @@ AMATA doesn’t just execute strategies — it learns from them.
 
 ## Why AMATA is the last EA I will ever build
 AMATA is not an EA — it is the platform that replaces the need to never again build another one. 
+
 AMATA is fully autonomous — strategies run themselves, and the platform handles timing, safety and execution without manual intervention.
 
 Instead of creating a new EA for every idea, every strategy or every symbol,  
@@ -47,7 +48,9 @@ because from here on, I only evolve strategies, not software.
 ## Documentation
 The full platform documentation is being released module by module:
 
-- `docs/AMATA_platform_structure.md` (coming soon)  
+- `docs/AMATA_platform_overview.md`  
+- `docs/AMATA_system_architecture.md`  
+- `docs/AMATA_documentation_structure.md`  
 - `docs/AMATA_roadmap.md` (coming soon)
 
 ## Status
