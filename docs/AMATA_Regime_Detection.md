@@ -99,11 +99,12 @@ Every regime transition is logged in real time.
 
 Example:
 
+```text
 REGIME INIT     | XAUUSD | Neutral
 REGIME CHANGE   | XAUUSD | Neutral → Mean Reversion
 REGIME CHANGE   | US30   | Mean Reversion → Overextended
 REGIME CHANGE   | US30   | Overextended → Neutral
-
+```
 These logs are used for:
 
 - debugging  
