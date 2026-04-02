@@ -48,7 +48,7 @@ Each symbol profile may choose to use only a subset of these regimes, or interpr
 
 Below is a real backtesting example showing how AMATA transitions between volatility regimes on USDJPY.
 
-![AMATA Regime Detection – USDJPY](examples/AMATA_regime_detection_usdjpy.png)
+![AMATA Regime Detection – USDJPY](../examples/AMATA_regime_detection_usdjpy.png)
 
 **Illustration of USDJPY moving from a neutral volatility regime into a TrendStart impulse, followed by a confirmed trend phase and later trend continuation during AMATA backtesting.**
 
@@ -122,7 +122,7 @@ They exist purely to verify that AMATA’s market classification behaves as expe
 
 Below is a real example in the MT5 platform from AMATA’s live regime detection, showing how multiple symbols transition between regimes in real time.
 
-![AMATA Live Regime Logging](examples/AMATA_live_regime_logging.png)
+![AMATA Live Regime Logging](../examples/AMATA_live_regime_logging.png)
 
 AMATA logs every regime transition mechanically, across all active symbols, 24/7.  
 This transparency allows users to verify that the Regime Engine behaves as expected during live trading.
