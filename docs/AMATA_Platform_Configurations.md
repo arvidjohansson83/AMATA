@@ -10,36 +10,36 @@ These inputs do **not** modify strategy logic — they control safety, volatilit
 ## 1. Safety & Execution Controls
 Defines when AMATA is allowed to execute and how risk is enforced at the platform level.
 
-### **MaxDailyLoss**
+### **- MaxDailyLoss**
 Stops all trading for the day once realized losses exceed this threshold.
 
-### **MaxDailyDrawdown**
+### **- MaxDailyDrawdown**
 Pauses execution if the account experiences a peak‑to‑trough drawdown beyond the configured limit.
 
-### **MaxLossPerSymbol**
+### **- MaxLossPerSymbol**
 Prevents overexposure by limiting the maximum allowed loss per individual symbol.
 
-### **MaxOpenTrades**
+### **- MaxOpenTrades**
 Global cap on the number of simultaneous open positions across all symbols.
 
-### **MaxOpenTradesPerSymbol**
+### **- MaxOpenTradesPerSymbol**
 Restricts how many trades a single symbol may hold at the same time.
 
-### **MaxTradesPerSession**
+### **- MaxTradesPerSession**
 Prevents over‑trading within a single liquidity session.
 
-### **BlockAsianSession / BlockLondonSession / BlockUSSession**
+### **- BlockAsianSession / BlockLondonSession / BlockUSSession**
 Disables trading for the entire session.
 
 Used on days with dense news clusters or extreme macro events (e.g., CPI, NFP, rate decisions) when volatility is unpredictable and institutional desks often stay flat.
 This allows the user to avoid execution between back‑to‑back releases or during sessions known to produce unstable market conditions.
 
-### **SessionPreOpenBlockMinutes**
+### **- SessionPreOpenBlockMinutes**
 Blocks trading X minutes before a session opens.
 
 Applies only to sessions that are enabled via BlockAsianSession, BlockLondonSession or BlockUSSession.
 
-### **SessionPostOpenBlockMinutes**
+### **- SessionPostOpenBlockMinutes**
 Extends the block after session open to avoid spread spikes and chaotic opening behavior.
 
 Also applies only to sessions that are actively blocked.
@@ -49,15 +49,15 @@ Also applies only to sessions that are actively blocked.
 ## 2. Volatility & Exhaustion Controls
 Influences volatility classification and daily exhaustion logic.
 
-### **ATR_Period**
+### **- ATR_Period**
 Defines the ATR window used for volatility measurement.
 
-### **DailyATR_Threshold**
+### **- DailyATR_Threshold**
 If a symbol’s daily ATR exceeds this threshold, AMATA stops scanning it for the remainder of the day.
 
 This protects against symbols that move far beyond their typical daily pip range, indicating abnormal volatility or event‑driven instability specific to that instrument.
 
-### **SpreadATRMultiplier**
+### **- SpreadATRMultiplier**
 Prevents execution when the spread is too large relative to the symbol’s current ATR.
 
 This ensures that a symbol is only tradable when there is sufficient volatility to justify the spread cost. If the spread exceeds the allowed ATR‑multiple, AMATA blocks entries to avoid trading in low‑energy or illiquid market conditions.
@@ -69,7 +69,7 @@ AMATA uses a ZigZag‑based structure model to identify recent swing highs and l
 
 The parameters below control how sensitive the structure detection is, but the underlying logic follows the standard MetaTrader ZigZag implementation.
 
-### **ZigZagDepth / ZigZagDeviation / ZigZagBackstep**
+### **- ZigZagDepth / ZigZagDeviation / ZigZagBackstep**
 These parameters define how AMATA interprets structural swings.
 
 For detailed behavior, refer to the official MetaTrader ZigZag documentation.
@@ -79,21 +79,21 @@ For detailed behavior, refer to the official MetaTrader ZigZag documentation.
 ## 4. Institutional Activity Windows
 Defines when AMATA is active for each asset class, aligned with institutional liquidity.
 
-### **ForexStartHour / ForexEndHour**
+### **- ForexStartHour / ForexEndHour**
 Primary trading window for FX pairs.
 
-### **CommodityStartHour / CommodityEndHour**
+### **- CommodityStartHour / CommodityEndHour**
 Defines when commodity markets are considered liquid and tradable.
 
-### **IndexOpenTimes**
+### **- IndexOpenTimes**
 List of index‑specific open times used for session‑based logic.
 
-### **IndexCloseHour**
+### **- IndexCloseHour**
 Defines when index trading should stop for the day.
 
 Different symbols open at different times, and AMATA aligns activity windows accordingly.
 
-### **DailySessionClose (Automatic Position Flush)**
+### **- DailySessionClose (Automatic Position Flush)**
 AMATA automatically closes all open positions at the end of each trading day.
 
 This avoids overnight swaps, illiquid Asian‑session conditions, and extreme spread expansion.
@@ -104,10 +104,10 @@ The platform resets and reloads symbol states every night to ensure clean execut
 ## 5. Symbol Loading & Mapping
 Controls which symbols AMATA manages and how they are grouped.
 
-### **SymbolsToLoad**
+### **- SymbolsToLoad**
 List of all symbols AMATA should initialize, monitor and manage.
 
-### **IndexSymbols**
+### **- IndexSymbols**
 Defines which symbols belong to the index asset class for session and volatility logic.
 
 ---
@@ -115,7 +115,7 @@ Defines which symbols belong to the index asset class for session and volatility
 ## 6. Debug & Development Tools
 Enables additional console output for development and troubleshooting.
 
-### **DebugMode**
+### **- DebugMode**
 Activates extended logging for diagnostics, development and platform verification.
 
 ---
