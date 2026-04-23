@@ -11,7 +11,7 @@ The Safety Engine ensures that AMATA operates only when market conditions are st
 ## 1. Purpose
 
 Financial markets can experience extreme volatility during certain news events.  
-The Safety Engine is designed to:
+The AMATA Safety Engine is designed to:
 
 - Apply symbol‑specific news mapping  
 - Support externally configurable lock durations  
@@ -23,42 +23,41 @@ This module enhances AMATA’s robustness by ensuring that trading occurs only i
 
 ---
 
-## 2. External News Configuration
+## 2. How AMATA Handles News Releases
 
-The Safety Engine uses **external news files** that define:
+AMATA includes a dedicated **Safety Engine** designed to protect the platform during periods of abnormal volatility caused by scheduled economic events.
 
-- Relevant news events  
-- Affected currencies or symbols  
-- Exact timestamps  
+For every upcoming news release, AMATA follows a strict policy:
 
-These files include only events with **historically proven market influence**.
+- If a symbol is likely to be affected by the event, AMATA activates a Safety Filter
+- This filter temporarily blocks new trades before and after the event
+- Only symbols that may experience volatility are locked
+- All unaffected symbols continue trading normally
 
-Because configuration is external:
-
-- No sensitive logic is embedded in the AMATA Execution Engine  
-- News lists can be updated at any time  
-- Licensing remains protected  
-- Users can customize behavior without modifying code  
+This ensures that AMATA behaves in a controlled, institutional manner during sensitive market conditions caused by scheduled economic events, without interrupting trading on unrelated assets.
 
 ---
 
 ## 3. Symbol‑Specific News Mapping
 
-Each symbol has its own **news mapping**, ensuring:
+Each symbol in AMATA is linked to one or more currencies through a **symbol‑specific mapping system**.
+This mapping determines which news events are relevant for each symbol.
 
-- Only affected symbols are locked  
-- All other symbols continue trading  
-- Cross‑pairs inherit mapping from both currencies  
-- Multi‑asset trading remains uninterrupted  
+Key principles:
+
+- Symbols inherit news relevance from their associated currencies
+- Cross‑pairs inherit relevance from both currencies
+- Indices inherit relevance from the currencies that historically drive their volatility
+- Symbols with no relation to the event’s currency remain fully active
 
 Examples:
 
-- USD events locks only USD‑mapped symbols  
-- GBP events affects only GBP‑mapped symbols  
+- USD events lock only USD‑mapped symbols  
+- GBP events lock only GBP‑mapped symbols  
 - XAUUSD inherits USD mapping  
 - DAX40 → inherits EUR and USD
 
-This granular approach minimizes downtime and maximizes availability.
+This mapping ensures that AMATA reacts only to news events that are historically relevant for each symbol.
 
 ---
 
@@ -88,7 +87,7 @@ All news‑related behavior — including pre‑news and post‑news lock durati
 These files are fully user‑editable but are **not EA inputs**.
 
 For a complete overview of all platform‑level configuration options, see:  
-**User‑Configurable Platform Inputs**
+[**User‑Configurable Platform Inputs**](AMATA_Platform_Configurations.md)
 
 ---
 
@@ -145,11 +144,9 @@ This file acts as the raw data source for the Safety Engine.
 ### 8.2 Stage 2 — Currency‑Specific News Filters
 
 AMATA then loads external **currency‑specific news configuration files**. 
-These files determine:
+These files determine, **based on event titles**, which events should trigger execution locks.
 
-- Which events should trigger execution locks  
-
-Only events that have **historically shown strong market impact** are included in these filters.  
+Only events listed in these filters are treated as impactful.
 This ensures that AMATA does not block trading unnecessarily.
 
 ### 8.3 Combined Logic
