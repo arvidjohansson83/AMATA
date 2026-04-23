@@ -170,10 +170,16 @@ This design ensures:
 
 ## Summary
 
-The AMATA Safety Engine provides a critical protection layer that prevents trading during news events with historically proven market impact.  
-It applies symbol‑specific mapping, enforces externally configurable pre‑ and post‑news lock windows, and integrates seamlessly with the AMATA Engine without modifying strategy logic or symbol profiles.
+The AMATA Safety Engine provides a critical protection layer that prevents trading during news events with historically proven market impact.
 
-Weekly external news files keep the system aligned with real‑world market schedules.
+Key strengths:
+
+- **Symbol‑specific news mapping** ensures that only relevant symbols are locked during each scheduled  economic news release
+- **Externally configurable lock windows** allow full control over pre‑ and post‑news behavior  
+- **Seamless integration** with the AMATA Engine without modifying strategy logic or symbol profiles  
+- **Weekly external news files** keep the system aligned with real‑world market schedules  
+- **Minimal downtime** by blocking only symbols that may experience volatility  
+- **Institution‑grade execution safety** during sensitive market conditions  
 
 Together, these components form a transparent, reliable, and institution‑grade risk management layer that prevents unnecessary exposure during periods of elevated volatility.
 
