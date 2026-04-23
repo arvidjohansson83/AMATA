@@ -44,6 +44,25 @@ Extends the block after session open to avoid spread spikes and chaotic opening 
 
 Also applies only to sessions that are actively blocked.
 
+## 1.1 Strict Mode (Platform Integrity Protection)
+
+### **- StrictMode**
+Prevents users from manually modifying or interfering with trades that AMATA has opened and is managing.
+
+When **StrictMode = true**, AMATA enforces full platform integrity by blocking:
+
+- manual closing of AMATA‑managed positions  
+- manual modification of SL/TP  
+- manual volume adjustments  
+- manual movement or deletion of pending orders  
+- any discretionary intervention that would break AMATA’s internal logic  
+
+This ensures that AMATA can operate with full autonomy and execute its strategy without disruption.  
+Strict Mode is recommended for all production environments where AMATA’s statistical edge and execution logic must remain intact.
+
+Strict Mode exists to guarantee that AMATA’s execution logic, statistical edge and risk framework remain intact — without the risk of accidental or emotional manual interference.
+If the user disables Strict Mode, they regain full manual control — but also assume responsibility for any deviations from AMATA’s intended behavior.
+
 ---
 
 ## 2. Volatility & Exhaustion Controls
