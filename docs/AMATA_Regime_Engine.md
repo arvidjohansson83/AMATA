@@ -8,9 +8,9 @@ Regime detection is **fully mechanical**, **symbol‑specific**, and **executed 
 
 ---
 
-## Purpose of Regime Detection
+## Purpose of the Regime Engine
 
-The function determines the current **market regime**, which represents the structural condition of the symbol.  
+The Regime Engine determines the current **market regime**, which represents the structural condition of the symbol.  
 This classification is used by all Strategy Modules to decide:
 
 - whether a strategy is allowed  
@@ -148,7 +148,7 @@ With it, AMATA becomes a **context‑aware trading platform**.
 
 ## Summary
 
-The Regime Detection Function is the core mechanism that allows AMATA to:
+The Regime Engine is the core mechanism that allows AMATA to:
 
 - understand market structure  
 - classify environments mechanically  
