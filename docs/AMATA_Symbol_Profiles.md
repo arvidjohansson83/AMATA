@@ -177,23 +177,40 @@ The engine updates the SL dynamically based on the profile’s rules.
 ---
 
 ## 9. SL/TSL System  
-### Layered, Strategy‑Specific Stop Logic
+### Volatility‑Aligned, Entry‑Type‑Specific Stop Logic
 
-AMATA supports a **layered SL/TSL override system**, where Stop Loss and Trailing Stop rules can be defined at multiple levels:
+AMATA uses a layered SL/TSL system where Stop Loss and Trailing Stop rules are defined externally for each symbol.  
+These rules adapt dynamically to:
 
-- **default SL/TSL**  
-- **regime‑specific SL/TSL**  
-- **entry‑type‑specific SL/TSL**  
-- **strategy‑specific overrides**  
+- **market regime**  
+- **entry type** (STOP or LIMIT)  
+- **strategy‑specific overrides**
 
-AMATA loads these layers in order:
+This ensures that each strategy operates with risk parameters that reflect the symbol’s natural behaviour under different market conditions.
 
-1. default  
-2. regime override  
-3. entry‑type override  
-4. strategy override  
+### STOP vs LIMIT  
+AMATA separates SL/TSL logic based on the selected entry type:
 
-This creates a flexible, edge‑aware execution system suitable for **multi‑strategy orchestration**.
+- **LIMIT entries**  
+  Represent the symbol’s *default* behaviour.  
+  LIMIT entries operate across the full volatility spectrum of the symbol and use SL/TSL multipliers calibrated to the symbol’s natural volatility profile.
+
+- **STOP entries**  
+  Act as a *boost* or *sniper* mode.  
+  STOP entries are only enabled when the symbol’s historical data shows a clear and consistent separation between STOP‑based and LIMIT‑based entry characteristics.  
+  When this separation exists, STOP entries use their own SL/TSL multipliers aligned with momentum‑driven volatility conditions.
+
+### Volatility‑Aligned Multipliers  
+All SL/TSL multipliers are derived from each symbol’s **natural volatility characteristics**, ensuring that risk parameters scale organically with the symbol’s behaviour rather than relying on fixed or generic distances.
+
+### Layer Loading Order  
+AMATA loads SL/TSL rules in the following order:
+
+1. regime‑specific rules  
+2. entry‑type‑specific rules (STOP or LIMIT)  
+3. strategy‑specific overrides  
+
+This layered structure creates a flexible, volatility‑aware risk system suitable for **multi‑strategy orchestration**, where each strategy can define its own behaviour while still operating within a unified execution framework.
 
 ---
 
