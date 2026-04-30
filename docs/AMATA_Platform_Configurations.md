@@ -66,20 +66,36 @@ If the user disables Strict Mode, they regain full manual control — but also a
 ---
 
 ## 2. Volatility & Exhaustion Controls
-Influences volatility classification and daily exhaustion logic.
 
-### **- ATR_Period**
-Defines the ATR window used for volatility measurement.
+These parameters define how AMATA interprets market volatility and when a symbol should be considered temporarily unsafe to trade.  
+They influence volatility classification, exhaustion detection, and spread‑to‑volatility validation.
 
-### **- DailyATR_Threshold**
-If a symbol’s daily ATR exceeds this threshold, AMATA stops scanning it for the remainder of the day.
+### User‑Configurable Inputs
 
-This protects against symbols that move far beyond their typical daily pip range, indicating abnormal volatility or event‑driven instability specific to that instrument.
+- **ATR_Period**  
+  Defines the ATR window used for volatility measurement.
 
-### **- SpreadATRMultiplier**
-Prevents execution when the spread is too large relative to the symbol’s current ATR.
+- **DailyATR_Threshold**  
+  If a symbol’s adjusted daily range exceeds this ATR‑based threshold, AMATA stops scanning it for the remainder of the day.  
+  This protects against abnormal, event‑driven volatility specific to that instrument.
 
-This ensures that a symbol is only tradable when there is sufficient volatility to justify the spread cost. If the spread exceeds the allowed ATR‑multiple, AMATA blocks entries to avoid trading in low‑energy or illiquid market conditions.
+- **SpreadATRMultiplier**  
+  Prevents execution when the spread is too large relative to the symbol’s current ATR.  
+  Ensures that trades are only taken when volatility justifies the spread cost.
+
+### Platform‑Controlled Volatility Logic
+
+AMATA includes additional volatility‑driven safety mechanisms that are not user‑configurable.  
+These are implemented by the **Volatility Engine** and include:
+
+- adjusted daily range calculation  
+- daily exhaustion detection  
+- volatility bucket classification  
+- spread‑to‑ATR validation  
+- per‑symbol session cooldown windows  
+
+These mechanisms ensure stable execution conditions and protect the platform from trading during abnormal volatility spikes or illiquid market phases.  
+They operate automatically and do not modify strategy logic — they define the *environment* in which strategies are allowed to operate.
 
 ---
 
