@@ -30,7 +30,7 @@ It receives validated entry requests from the Strategy Layer and ensures that th
 
 - **Regime Engine**  
   (current market regime classification — see the  
-  [Regime Detection Specification](./AMATA_Regime_Detection.md))
+  [Regime Engine Specification](./AMATA_Regime_Engine.md))
 
 - **Volatility Engine**  
   (ATR state, volatility bands — see  
