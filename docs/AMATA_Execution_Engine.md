@@ -199,7 +199,8 @@ The engine continuously monitors:
 - volatility shifts  
 - safety changes  
 
-When price reaches a LIMIT or STOP activation level, and the current regime is part of the symbol’s *preferred_classes*, the Execution Layer transitions state and executes immediately through a deterministic state machine.
+LIMIT or STOP entry conditions validate while the current regime remains in preferred_classes.
+When entry conditions are met - AMATA calculates position size, places SL and TP, executes immediately, and logs the trade.
 
 This is one of AMATA’s most advanced components.
 
@@ -219,8 +220,8 @@ AMATA models market phases as regimes, and each regime exhibits different statis
 
 Historical data shows that:
 
-**momentum‑driven regimes favour STOP‑based activation**
-**mean‑reversion or pullback regimes favour LIMIT‑based activation**
+- **momentum‑driven regimes favour STOP‑based activation**
+- **mean‑reversion or pullback regimes favour LIMIT‑based activation**
 
 For this reason, the Execution Engine loads separate thresholds, filters, and activation rules for STOP and LIMIT entries.
 
@@ -247,12 +248,13 @@ If so, AMATA loads all relevant thresholds from the symbol profile and prepares 
 
 ### **WAITING_FOR_PRICE**  
 Thresholds are active and strategies may validate edge.  
-AMATA now waits for one of two outcomes:
+AMATA now waits for one of three outcomes:
 
 1. **Entry conditions are validated** → proceed to EXECUTING  
-2. **The regime changes** → abort and return to READY  
+2. **The regime changes** → abort and return to READY 
+3. **Safety or symbol‑level constraints invalidate** → transition to a blocking state
 
-All regime changes are logged for full transparency.
+All regime and safety‑related interruptions are logged for full transparency.
 
 ### **EXECUTING**  
 All LIMIT or STOP entry conditions validate while the current regime remains in *preferred_classes*.
