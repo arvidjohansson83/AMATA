@@ -39,7 +39,8 @@ Symbol Profiles allow the user to define:
 
 - Entry conditions  
 - Market regime filters  
-- Stop Loss and Trailing Stop logic  
+- Stop Loss and Trailing Stop logic 
+- Take Profit level (regime‑aware, entry‑type‑aware) 
 - Indicator‑based conditions  
 - Time‑based filters  
 - Trend, range, breakout or pullback logic  
@@ -59,6 +60,7 @@ A Symbol Profile typically contains:
 - **Market Regime Definitions**  
 - **Stop Loss Configuration**  
 - **Trailing Stop Configuration**  
+- **Take Profit Configuration**
 - **Indicator Parameters**  
 - **Time‑Based Filters**  
 - **Strategy‑Specific Rules**  
@@ -148,63 +150,48 @@ This allows:
 
 ---
 
-## 7. Stop Loss Configuration
+## 7. AMATA Unified SL/TSL/TP System  
+### ATR‑Driven, Regime‑Aware, Entry‑Type‑Aware Risk Model
 
-AMATA uses a **unified, symbol‑agnostic ATR‑based Stop Loss model** across all symbols and strategies.  
-This creates a flexible, edge‑aware execution system suitable for multi‑strategy orchestration.
+AMATA uses a unified ATR‑based risk model where Stop Loss, Trailing Stop Loss (including TSL‑Step), and Take Profit levels are all derived from the same volatility‑aligned multiplier system.  
+This ensures that all risk parameters scale consistently with the symbol’s natural behaviour and remain coherent across regimes, entry types, and strategy overrides.
 
-Profiles may define:
+All components are:
 
-- ATR multipliers  
-- Regime‑specific ATR adjustments  
-- Entry‑type‑specific ATR adjustments  
+- ATR‑driven  
+- symbol‑specific  
+- regime‑aware  
+- entry‑type‑aware  
+- empirically calibrated  
+- externally defined in the Symbol Profile
 
-The AMATA Core Engine applies the SL configuration at entry.
+### Why a Unified Model  
+The unified SL/TSL/TP system ensures:
 
----
-
-## 8. Trailing Stop Configuration
-
-Trailing Stop logic is also ATR‑based and fully externalized:
-
-- ATR‑based trailing  
-- Step trailing  
-- Hybrid ATR models  
-- Minimum distance rules  
-
-The engine updates the SL dynamically based on the profile’s rules.
-
----
-
-## 9. SL/TSL System  
-### Volatility‑Aligned, Entry‑Type‑Specific Stop Logic
-
-AMATA uses a layered SL/TSL system where Stop Loss and Trailing Stop rules are defined externally for each symbol.  
-These rules adapt dynamically to:
-
-- **market regime**  
-- **entry type** (STOP or LIMIT)  
-- **strategy‑specific overrides**
-
-This ensures that each strategy operates with risk parameters that reflect the symbol’s natural behaviour under different market conditions.
+- consistent risk scaling  
+- coherent payoff structure  
+- stable expectancy across regimes  
+- balanced STOP/LIMIT behaviour  
+- predictable trade distribution  
+- clean multi‑strategy orchestration  
 
 ### STOP vs LIMIT  
-AMATA separates SL/TSL logic based on the selected entry type:
+AMATA separates SL/TSL/TP logic based on the selected entry type:
 
 - **LIMIT entries**  
   Represent the symbol’s *default* behaviour.  
-  LIMIT entries operate across the full volatility spectrum of the symbol and use SL/TSL multipliers calibrated to the symbol’s natural volatility profile.
+  LIMIT entries operate across the full volatility spectrum of the symbol and use SL/TSL/TP multipliers calibrated to the symbol’s natural volatility profile.
 
 - **STOP entries**  
-  Act as a *boost* or *sniper* mode.  
+  Act as a momentum-aligned "sniper" mode.  
   STOP entries are only enabled when the symbol’s historical data shows a clear and consistent separation between STOP‑based and LIMIT‑based entry characteristics.  
-  When this separation exists, STOP entries use their own SL/TSL multipliers aligned with momentum‑driven volatility conditions.
+  When this separation exists, STOP entries use their own SL/TSL/TP multipliers aligned with momentum‑driven volatility conditions.
 
 ### Volatility‑Aligned Multipliers  
-All SL/TSL multipliers are derived from each symbol’s **natural volatility characteristics**, ensuring that risk parameters scale organically with the symbol’s behaviour rather than relying on fixed or generic distances.
+All ATR multipliers are derived from each symbol’s **natural volatility characteristics**, ensuring that risk parameters scale organically with the symbol’s behaviour rather than relying on fixed or generic distances.
 
 ### Layer Loading Order  
-AMATA loads SL/TSL rules in the following order:
+AMATA loads SL/TSL/TP rules in the following order:
 
 1. regime‑specific rules  
 2. entry‑type‑specific rules (STOP or LIMIT)  
@@ -212,9 +199,56 @@ AMATA loads SL/TSL rules in the following order:
 
 This layered structure creates a flexible, volatility‑aware risk system suitable for **multi‑strategy orchestration**, where each strategy can define its own behaviour while still operating within a unified execution framework.
 
+
 ---
 
-## 10. Boost System  
+## 8. Stop Loss Configuration
+
+AMATA applies Stop Loss levels using the unified ATR‑based risk model.  
+Each symbol profile may define:
+
+- ATR multipliers  
+- regime‑specific SL adjustments  
+- entry‑type‑specific SL adjustments  
+
+The SL is applied at entry and remains active until Trailing Stop logic takes over.
+
+---
+
+## 9. Trailing Stop Configuration
+
+Trailing Stop logic is fully externalized and derived from the unified ATR‑based system.  
+Profiles may define:
+
+- ATR‑based trailing  
+- step‑based trailing (TSL‑Step)  
+- hybrid ATR/step models  
+- minimum distance rules  
+
+The engine updates the SL dynamically based on the profile’s rules and the symbol’s volatility conditions.
+
+---
+
+## 10. Take Profit Configuration  
+### Regime‑Aware, Entry‑Type‑Aware TP Levels
+
+AMATA uses an externalized Take Profit system where each symbol defines:
+
+- TP multipliers per market regime  
+- TP multipliers per entry type (STOP/LIMIT)  
+- TP ranges derived from empirical gridsearch  
+- TP behaviour aligned with the symbol’s volatility profile  
+
+These TP levels are calibrated per symbol to reflect:
+
+- volatility characteristics  
+- regime‑specific behaviour  
+- STOP/LIMIT separation  
+- historical payoff tendencies  
+
+---
+
+## 11. Boost System  
 ### Extracting Multiple Strategies From a Single Symbol
 
 Boosts are optional micro‑filters that activate only under specific structural or volatility conditions.  
@@ -285,7 +319,7 @@ They allow the user to define:
 - any logic  
 - any indicator  
 - any regime  
-- any SL/TSL profile  
+- any SL/TSL/TP profile  
 
 without modifying the AMATA Core Engine.
 
