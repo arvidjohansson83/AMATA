@@ -1,6 +1,9 @@
 # AMATA — Autonomous Multi‑Asset & Multi‑Strategy Trading Agent
 ## A fully autonomous, regime‑aware and volatility‑adaptive trading agent built for real market conditions.
 
+[▶ Watch AMATA Initialization Video](https://youtu.be/xdFQfwbHBqU)
+
+[![AMATA Initialization Video](https://img.shields.io/badge/▶_Watch_Initialization_Video-000000?style=for-the-badge&logo=video)](https://youtu.be/xdFQfwbHBqU)
 
 AMATA is the evolution of my session‑based architecture MATA.  
 Where MATA focused on structural patterns, volatility behaviour and deterministic execution,  
