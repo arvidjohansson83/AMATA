@@ -269,6 +269,11 @@ This enables **multiple strategies within the same symbol and regime**, as long 
 
 The Boost System unlocks additional strategies whenever a symbol naturally exhibits STOP/LIMIT divergence, allowing AMATA to scale horizontally without modifying the core engine.
 
+### 🔗 Full Boost Architecture Documentation
+
+For a complete architectural explanation of how Boosts operate inside the AMATA Platform — including activation logic, entry‑policy modification, and multi‑strategy orchestration — see:
+[Boost Architecture](./AMATA_Boost_Architecture.md)
+
 ---
 
 ## 11. Time‑Based Filters
