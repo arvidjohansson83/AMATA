@@ -30,7 +30,7 @@ AMATA begins by scanning the filesystem for all required configuration files:
 This step ensures that all external modules are present and valid before the platform proceeds.
 
 **Example Output:**  
-![File Scan](../examples/AMATA_symbol_policies.png)
+![File Scan](../examples/A5_symbol_policies.png)
 
 ---
 
@@ -47,7 +47,7 @@ These define:
 This step activates AMATA’s symbol‑aware news filtering system.
 
 **Example Output:**  
-![News Policies](../examples/AMATA_news_policies.png)
+![News Policies](../examples/A5_news_policies.png)
 
 ---
 
@@ -63,7 +63,7 @@ In this example:
 This forms the foundation of AMATA’s macro‑aware safety layer.
 
 **Example Output:**  
-![Weekly News & News Blocks](../examples/AMATA_weekly_news_blocks.png)
+![Weekly News & News Blocks](../examples/A5_weekly_news_blocks.png)
 
 ---
 
@@ -88,6 +88,6 @@ All engines and subsystems are online:
   - Logging Systems  
 
 **Example Output:**  
-![AMATA Initialization Summary](../examples/AMATA_initialization_summary.png)
+![AMATA Initialization Summary](../examples/A5_initialization_summary.png)
 
 ---

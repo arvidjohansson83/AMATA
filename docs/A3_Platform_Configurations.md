@@ -1,6 +1,6 @@
 # AMATA Platform Configurations
 
-![AMATA User Inputs](../examples/AMATA_user_inputs.png)
+![AMATA User Inputs](../examples/A3_user_inputs.png)
 
 AMATA exposes a set of high‑level configuration parameters that define the *environment* in which strategies operate.  
 These inputs do **not** modify strategy logic — they control safety, volatility handling, structure detection and institutional activity windows.
