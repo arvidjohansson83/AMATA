@@ -99,8 +99,8 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 
 ## **D — Strategy & Multi‑Strategy Layer**
 - [D1_Strategy_Modules.md](docs/D1_Strategy_Modules.md)  
-- [D2_Multi_Strategy_Engine.md](docs/D2_Multi_Strategy_Engine.md)  
-- [D3_Multi_Symbol_Engine.md](docs/D3_Multi_Symbol_Engine.md)  
+- [D2_Multi_Strategy_Architecture.md](docs/D2_Multi_Strategy_Architecture.md)  
+- [D3_Multi_Symbol_Architecture.md](docs/D3_Multi_Symbol_Architecture.md)  
 
 ## **E — Safety & Macro Layer**
 - [E1_Safety_Engine.md](docs/E1_Safety_Engine.md)  
