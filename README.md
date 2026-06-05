@@ -23,7 +23,7 @@ AMATA is not a strategy — it is a **platform** for running strategies.
 ---
 
 ## 🧠 Why AMATA Exists
-Running MATA live revealed a key limitation:  
+Running [MATA](https://github.com/arvidjohansson83/MATA) live revealed a key limitation:  
 **structure without context is not enough.**
 
 MATA executed every day at fixed times, regardless of regime, volatility or macro events.  
