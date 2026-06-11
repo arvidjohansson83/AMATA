@@ -83,7 +83,7 @@ Independently of the left‑aligned panel, AMATA renders a **centered, high‑vi
 Displayed when a news lock is currently active:
 
 - “COMING NEWS BLOCK”  
-- `<CUR> – <TITLE> @ <TIME>`  
+- `<CURRENCY> – <TITLE> @ <TIME>`  
 - Countdown until the lock expires  
 - Blinking when < 60 seconds remain  
 
@@ -92,7 +92,7 @@ Displayed when a news lock is currently active:
 Displayed when no lock is active:
 
 - “COMING NEWS BLOCK”  
-- `<CUR> – <TITLE> @ <TIME>`  
+- `<CURRENCY> – <TITLE> @ <TIME>`  
 - Countdown until the event begins  
 - Blinking when < 60 seconds remain  
 
