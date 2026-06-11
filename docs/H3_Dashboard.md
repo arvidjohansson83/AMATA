@@ -4,7 +4,7 @@
 The AMATA Dashboard provides a clear, real‑time visualization of upcoming daily news events and Safety Engine lock states across the entire platform. All of this runs from a single chart. 
 It is designed to give users full transparency into AMATA’s operational status without requiring interaction with logs or configuration files.
 
-(../examples/H3_dashboard_overview.png)
+!(../examples/H3_dashboard_overview.png)
 
 ---
 
