@@ -4,7 +4,7 @@
 The AMATA Dashboard provides a clear, real‑time visualization of upcoming daily news events and Safety Engine lock states across the entire platform. All of this runs from a single chart. 
 It is designed to give users full transparency into AMATA’s operational status without requiring interaction with logs or configuration files.
 
-[Dashboard Overview](../examples/H3_dashboard_overview.png)
+(../examples/H3_dashboard_overview.png)
 
 ---
 
@@ -39,7 +39,7 @@ This line shows AMATA’s global operating mode:
 
 This gives an immediate understanding of whether the system is allowed to execute trades.
 
-Strict Mode is a platform‑level protection feature that prevents manual interference with AMATA‑managed trades. For a full explanation, see the **Strict Mode section** in the [Platform Configurations](./A3_Platform_Configurations.md) documentation.
+Strict Mode is a platform‑level protection feature that prevents manual interference with AMATA‑managed trades. For a full explanation, see the **Strict Mode section** in the [Platform Configurations Section 1.1](./A3_Platform_Configurations.md) documentation.
 
 ---
 
@@ -123,7 +123,7 @@ The dashboard is tightly integrated with the Safety Engine:
 - Lock expires and the dashboard returns to normal  
 - All logic is driven by external news files  
 
-For a complete explanation of how AMATA evaluates, filters, and applies news‑based execution locks, see the [**Safety Engine**](./E1_Safety_Engine.md).
+For a complete explanation of how AMATA evaluates, filters, and applies news‑based execution locks, see the [**Safety Engine documentation**](./E1_Safety_Engine.md).
 
 The dashboard visualizes state — it does not influence trading logic.
 
