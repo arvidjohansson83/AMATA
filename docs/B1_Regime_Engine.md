@@ -71,6 +71,8 @@ Regime classification is driven by **Symbol Profiles**, which define:
 Because each symbol behaves differently, AMATA maintains **independent regime logic per symbol**.
 This ensures that every asset is classified according to its own volatility structure and behavioural characteristics.
 
+The Regime Engine operates on the structural features extracted by AMATA’s Backtesting Pipeline, including swings, volatility shifts and micro‑movement patterns.
+
 Example:  
 Gold (XAUUSD) may have different TrendStart thresholds than USDJPY or AUS200.
 
