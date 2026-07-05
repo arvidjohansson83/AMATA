@@ -122,8 +122,9 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 
 ## **I — Development & Analysis**
 - [I1_Backtesting_Pipeline.md](docs/I1_Backtesting_Pipeline.md)  
-- [I2_Gridsearch_Optimization.md](docs/I2_Gridsearch_Optimization.md)  
-- [I3_Examples.md](docs/I3_Examples.md)  
+- [I2_Strategy_Extraction.md](docs/I2_Strategy_Extraction.md)  
+- [I3_Gridsearch_Optimization.md](docs/I3_Gridsearch_Optimization.md)  
+- [I4_Examples.md](docs/I4_Examples.md)  
 
 ## **J — Meta**
 - [J1_Glossary.md](docs/J1_Glossary.md)  
