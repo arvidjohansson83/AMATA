@@ -272,7 +272,7 @@ The Boost System unlocks additional strategies whenever a symbol naturally exhib
 ### 🔗 Full Boost Architecture Documentation
 
 For a complete architectural explanation of how Boosts operate inside the AMATA Platform — including activation logic, entry‑policy modification, and multi‑strategy orchestration — see:
-[Boost Architecture](./AMATA_Boost_Architecture.md)
+[Boost Architecture](./C2_Boost_Architecture.md)
 
 ---
 

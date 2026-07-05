@@ -102,7 +102,7 @@ Execution Layer
 ```
 
 ### Layer 1 — Safety Engine 
-[Safety Engine Specification](./AMATA_Safety_Engine.md)
+[Safety Engine Specification](./E1_Safety_Engine.md)
 
 The environment must be safe:
 
@@ -113,12 +113,12 @@ The environment must be safe:
 - no spread violations 
 
 ### Layer 2 — Regime Engine 
-[Regime Engine Specification](./AMATA_Regime_Engine.md)
+[Regime Engine Specification](./B1_Regime_Engine.md)
 
 The current regime must be included in the symbolprofile’s preferred_classes.
 
 ### Layer 3 — Symbol Profile  
-[Symbol Profile Specification](./AMATA_Symbol_Profiles.md)
+[Symbol Profile Specification](./C1_Symbol_Profiles.md)
 
 Symbol‑specific thresholds must be satisfied:
 

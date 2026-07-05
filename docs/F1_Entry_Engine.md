@@ -26,19 +26,19 @@ It receives validated entry requests from the Strategy Layer and ensures that th
 
 - **Safety Engine**  
   (news locks, session blocks, volatility constraints — see the  
-  [Safety Engine Specification](./AMATA_Safety_Engine.md))
+  [Safety Engine Specification](./E1_Safety_Engine.md))
 
 - **Regime Engine**  
   (current market regime classification — see the  
-  [Regime Engine Specification](./AMATA_Regime_Engine.md))
+  [Regime Engine Specification](./B1_Regime_Engine.md))
 
 - **Volatility Engine**  
   (ATR state, volatility bands — see  
-  [Platform Configurations — Volatility & Exhaustion Controls](./AMATA_Platform_Configurations.md))
+  [Platform Configurations — Volatility & Exhaustion Controls](./A3_Platform_Configurations.md))
 
 - **Symbol Profiles**  
   (strategy‑specific entry conditions defined externally — see the  
-  [Symbol Profile Specification](./AMATA_Symbol_Profiles.md))
+  [Symbol Profile Specification](./C1_Symbol_Profiles.md))
 
 Only when all relevant conditions are satisfied does the Entry Engine prepare a structured entry request for the Execution Engine.
 

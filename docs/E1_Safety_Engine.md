@@ -87,7 +87,7 @@ All news‑related behavior — including pre‑news and post‑news lock durati
 These files are fully user‑editable but are **not EA inputs**.
 
 For a complete overview of all platform‑level configuration options, see:  
-[**User‑Configurable Platform Inputs**](AMATA_Platform_Configurations.md)
+[**User‑Configurable Platform Inputs**](A3_Platform_Configurations.md)
 
 ---
 
