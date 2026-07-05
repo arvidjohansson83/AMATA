@@ -1,4 +1,4 @@
-# **Backtesting Pipeline**
+# AMATA Backtesting Pipeline
 ### How AMATA Reconstructs Market Behaviour Candle‑by‑Candle
 
 ---

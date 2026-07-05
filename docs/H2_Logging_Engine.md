@@ -1,4 +1,4 @@
-# **Live Trade Logging**
+# AMATA Live Trade Logging
 ### How AMATA Captures Every Trade for Analysis, ML, and Continuous Improvement
 
 Most trading systems execute trades — but they don’t *learn* from them.  

@@ -1,4 +1,4 @@
-# Multi‑Symbol Architecture  
+# AMATA Multi‑Symbol Architecture  
 **How AMATA Operates as a True Multi‑Asset Trading Agent**
 
 AMATA is not designed to trade a single symbol.  

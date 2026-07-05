@@ -1,4 +1,4 @@
-# Symbol Profile Specification  
+# AMATA Symbol Profile Specification  
 ### Modular Strategy Definition for the AMATA Trading Agent
 
 

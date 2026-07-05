@@ -1,4 +1,4 @@
-# **Strategy Extraction**
+# AMATA Strategy Extraction
 ### How AMATA Transforms Market Behaviour Into Tradeable Strategies
 
 ---

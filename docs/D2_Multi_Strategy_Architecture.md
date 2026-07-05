@@ -1,4 +1,4 @@
-# Multi‑Strategy Architecture
+# AMATA Multi‑Strategy Architecture
 **How AMATA Scales Vertically Through Modular, External Strategy Design**
 
 One of the defining strengths of the AMATA Platform is its ability to run **multiple independent strategies** inside the same execution environment — safely, deterministically, and without conflicts.  
