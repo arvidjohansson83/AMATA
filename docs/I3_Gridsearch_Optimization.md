@@ -271,8 +271,8 @@ Multiplier Optimization enables AMATA to:
 
 AMATA doesn’t guess.
 
-**AMATA measures**.
-**AMATA optimizes**.
-**AMATA executes with precision**.
+**AMATA measures**.  
+**AMATA optimizes**.  
+**AMATA executes with precision**.  
 
 ---
