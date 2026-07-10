@@ -2,7 +2,7 @@
 
 This example illustrates how AMATA detects and transitions between volatility regimes during backtesting.
 
-![AMATA Regime Detection – USDJPY](AMATA_regime_detection_usdjpy.png)
+![AMATA Regime Detection – USDJPY](/examples/B1_regime_detection_usdjpy.png)
 
 **Illustration of USDJPY moving from a neutral volatility regime into a TrendStart impulse, followed by a confirmed trend phase and later trend continuation during AMATA backtesting.**
 
