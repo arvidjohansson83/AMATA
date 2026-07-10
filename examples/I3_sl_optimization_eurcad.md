@@ -13,7 +13,7 @@ This trade demonstrates how SL‑multipliers determine whether a trend‑strateg
 
 ## 🖼️ Illustration
 
-![EURCAD SL Example](/examples/I3_sl_optimization_EURCAD.png)
+![EURCAD SL Example](/examples/I3_sl_optimization_eurcad.png)
 *EURCAD — textbook continuation behaviour with SL placed slightly too tight*.
 
 EURCAD traded in a narrow Asian-session range. AMATA detected a valid setup and placed an optimal entry. Later in the morning, Euro‑driven news created a strong volatility expansion — producing a **clean, multi‑R continuation pattern**.

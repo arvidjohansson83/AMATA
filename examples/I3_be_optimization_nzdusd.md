@@ -13,7 +13,7 @@ To demonstrate how **early TSL activation** in a *low‑volatility regime* can m
 
 ## 🖼️ Illustration
 
-[NZDUSD TSL BE example](/examples/I3_be_optimization_nzdusd.png)
+![NZDUSD TSL BE example](/examples/I3_be_optimization_nzdusd.png)
 *NZDUSD — clean thrust and early continuation, but TSL activated too early due to low ATR and tight activation geometry*.
 
 NZDUSD formed a clean thrust during the London session and began developing a stable continuation pattern.

@@ -188,8 +188,8 @@ Shows how SL‑multipliers align with:
 
 Examples:
 
-[Main example - EURCAD](../examples/I3_sl_optimization_eurcad.md)
-[Additional example - GBPUSD](../examples/I3_sl_optimization_gbpusd.md)
+[Main example - EURCAD](../examples/I3_sl_optimization_eurcad.md)  
+[Additional example - GBPUSD](../examples/I3_sl_optimization_gbpusd.md)  
 
 ---
 
@@ -207,8 +207,8 @@ Shows how TSL activation **fails** when the trigger multiplier is too tight:
 
 Examples:
 
-[Early activation to breakeven in unstable volatility - EURGBP](../examples/I3_be_optimization_eurgbp.md)
-[Early activation in low‑volatility regime - NZDUSD](../examples/I3_be_optimization_nzdusd.md)
+[Early activation to breakeven in unstable volatility - EURGBP](../examples/I3_be_optimization_eurgbp.md)  
+[Early activation in low‑volatility regime - NZDUSD](../examples/I3_be_optimization_nzdusd.md)  
 
 ---
 
@@ -226,8 +226,8 @@ Shows how TSL activation:
 
 Examples:
 
-[Correct Trailing Behaviour - AUDCAD](../examples/I3_tsl_step_optimization_audcad.md)
-[Correct Trailing Behaviour - GBPCHF](../examples/I3_tsl_step_optimization_gbpchf.md)
+[Correct Trailing Behaviour - AUDCAD](../examples/I3_tsl_step_optimization_audcad.md)  
+[Correct Trailing Behaviour - GBPCHF](../examples/I3_tsl_step_optimization_gbpchf.md)  
 
 ---
 
@@ -245,8 +245,8 @@ Shows how trailing **fails to follow the entire trend movement when TSL Step geo
 
 Examples:
 
-[Premature trailing in shallow‑continuation behaviour - AUDUSD](../examples/I3_tsl_step_optimization_audusd.md)
-[Premature trailing in high‑volatility regime - GBPAUD](../examples/I3_tsl_step_optimization_gbpaud.md)
+[Premature trailing in shallow‑continuation behaviour - AUDUSD](../examples/I3_tsl_step_optimization_audusd.md)  
+[Premature trailing in high‑volatility regime - GBPAUD](../examples/I3_tsl_step_optimization_gbpaud.md)  
 
 ---
 

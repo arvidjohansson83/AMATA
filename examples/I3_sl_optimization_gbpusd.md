@@ -9,7 +9,7 @@ Since then, AMATA’s SL‑multipliers have been refined with **more trades, imp
 
 ## 🖼️ Illustration
 
-![GBPUSD SL Example](/examples/I3_sl_optimization_GBPUSD.png)
+![GBPUSD SL Example](/examples/I3_sl_optimization_gbpusd.png)
 *GBPUSD — AMATA placed an optimal trend-entry, but the SL was positioned slightly too tight during early trend formation, resulting in a premature exit before the continuation unfolded.*
 
 ---
