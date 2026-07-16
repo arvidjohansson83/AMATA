@@ -103,8 +103,7 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 - [D3_Multi_Symbol_Architecture.md](docs/D3_Multi_Symbol_Architecture.md)  
 
 ## **E — Safety & Macro Layer**
-- [E1_Safety_Engine.md](docs/E1_Safety_Engine.md)  
-- [E2_News_Engine.md](docs/E2_News_Engine.md)  
+- [E1_Safety_Engine.md](docs/E1_Safety_Engine.md)   
 
 ## **F — Entry & Execution Layer**
 - [F1_Entry_Engine.md](docs/F1_Entry_Engine.md)  
@@ -112,7 +111,7 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 
 ## **G — Risk & Limits Layer**
 - [G1_Risk_Model.md](docs/G1_Risk_Model.md)  
-- [G2_ATR_TSL_System.md](docs/G2_ATR_TSL_System.md)  
+- [G2_Trend_Following_Engine.md](docs/G2_Trend_Following_Engine.md)  
 
 ## **H — System Infrastructure**
 - [H1_State_Machine.md](docs/H1_State_Machine.md)  
@@ -124,7 +123,6 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 - [I1_Backtesting_Pipeline.md](docs/I1_Backtesting_Pipeline.md)  
 - [I2_Strategy_Extraction.md](docs/I2_Strategy_Extraction.md)  
 - [I3_Gridsearch_Optimization.md](docs/I3_Gridsearch_Optimization.md)  
-- [I4_Examples.md](docs/I4_Examples.md)  
 
 ## **J — Meta**
 - [J1_Glossary.md](docs/J1_Glossary.md)  
