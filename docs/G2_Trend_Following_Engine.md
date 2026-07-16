@@ -118,5 +118,5 @@ With it, AMATA becomes a behaviour‑aligned, volatility‑adaptive trailing sys
 ---
 
 ## 📎 Example
-A complete behaviour‑aligned Trend Following Engine example is available here:
+A complete behaviour‑aligned Trend Following Engine example is available here:  
 [Trend Following Engine — Example](/examples/G2_Trend_Following_Engine_NZDCAD.md)

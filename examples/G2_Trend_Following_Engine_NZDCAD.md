@@ -43,7 +43,7 @@ This example shows a complete TFE progression from **entry → activation → tr
 
 ## 🖼️ Illustration - Trend Following Engine progression (NZDCAD)  
 
-![NZDCAD Entry](/examples/G2_tfe_entry_nzdcad.png)
+![NZDCAD Entry](/examples/G2_tfe_entry_nzdcad.png)  
 The entry at **0.80306** was validated by stable volatility and clean thrust behaviour. ATR at entry defined the baseline geometry: the initial stop‑loss was placed at **1.0 ATR** below entry, reflecting AMATA’s volatility‑normalized risk model.
 
 ![NZDCAD Trailing Activation](/examples/G2_tfe_trailing_activation_nzdcad.png)
