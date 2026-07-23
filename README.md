@@ -112,6 +112,7 @@ All documentation is organised into modular sections that reflect AMATA’s arch
 ## **G — Risk & Limits Layer**
 - [G1_Risk_Model.md](docs/G1_Risk_Model.md)  
 - [G2_Trend_Following_Engine.md](docs/G2_Trend_Following_Engine.md)  
+- [G3_Agent_Workflow.md](docs/G3_Agent_Workflow.md)
 
 ## **H — System Infrastructure**
 - [H1_State_Machine.md](docs/H1_State_Machine.md)  
